@@ -44,19 +44,19 @@ The plugin ships prebuilt (`dist/server.js`, `dist/tui.js`), so OpenCode does no
 
 ### Registration
 
-`opencode.jsonc` — the recorder that writes the store, and the no-op server half of the TUI package:
+`opencode.jsonc` — the recorder that writes the store:
 
 ```jsonc
 {
-  "plugins": ["@sergeloie/omo-slim-usage", "@sergeloie/omo-slim-usage/tui"]
+  "plugins": ["@sergeloie/omo-slim-usage"]
 }
 ```
 
-`tui.json` — the TUI plugin:
+`tui.json` — the TUI plugin. The package name goes here too; the TUI resolves the `./tui` export itself:
 
 ```jsonc
 {
-  "plugin": "@sergeloie/omo-slim-usage/tui"
+  "plugin": ["@sergeloie/omo-slim-usage"]
 }
 ```
 
