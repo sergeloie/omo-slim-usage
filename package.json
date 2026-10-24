@@ -1,0 +1,22 @@
+{
+  "name": "@sergeloie/omo-slim-usage",
+  "version": "0.1.0",
+  "description": "OpenCode usage tracker: per-role tokens and cost, Console spend, monthly caps and forecast, TUI sidebar and /cost dialog",
+  "type": "module",
+  "license": "MIT",
+  "private": false,
+  "exports": {
+    ".": "./dist/server.js",
+    "./server": "./dist/server.js",
+    "./tui": "./dist/tui.js",
+    "./lib/*": "./src/lib/*"
+  },
+  "bin": { "omo-usage": "./bin/omo-usage.mjs" },
+  "files": ["dist", "src/lib", "bin", "README.md", "LICENSE"],
+  "scripts": {
+    "build": "node scripts/build.mjs",
+    "test": "node --test test/*.test.mjs",
+    "prepare": "node scripts/build.mjs"
+  },
+  "devDependencies": { "esbuild": "^0.25.0" }
+}
