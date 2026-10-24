@@ -15,8 +15,7 @@
   "files": ["dist", "src/lib", "bin", "README.md", "LICENSE"],
   "scripts": {
     "build": "node scripts/build.mjs",
-    "test": "node --test test/*.test.mjs",
-    "prepare": "node scripts/build.mjs"
+    "test": "node --test test/*.test.mjs"
   },
   "devDependencies": { "esbuild": "^0.25.0" }
 }
