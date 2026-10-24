@@ -220,7 +220,8 @@ function defaultDbPath() {
 }
 
 function readBudget() {
-  const file = join(import.meta.dirname, "budget.json")
+  const user = join(dirname(defaultStorePath()), "budget.json")
+  const file = existsSync(user) ? user : join(import.meta.dirname, "budget.json")
   if (!existsSync(file)) return { plan: "go", caps: {} }
   return JSON.parse(readFileSync(file, "utf8"))
 }
